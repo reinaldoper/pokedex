@@ -8,7 +8,7 @@
 <app-carregando *ngIf="!pokemonAbility.length"></app-carregando>
 <div class="pokemon" *ngIf="pokemonAbility.length">
   <ol *ngFor="let pok of pokemonAbility" class='embed_list'>
-    <p>{{pok.name}}</p>
+    <button type="button" (click)="getText(pok.name)" class="pok-name"><strong>{{pok.name}}</strong></button>
     <li><img src={{pok.front_default}} alt="imagens"></li>
     <li><img src={{pok.back_default}} alt="imagens"></li>
   </ol>

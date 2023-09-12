@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './utils/service.service';
-import { Pokemon, AbilitySprites } from './utils/TTypes/TTypes';
+import { Pokemon, AbilitySprites, Ability } from './utils/TTypes/TTypes';
 import { Observable, forkJoin } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,19 @@ export class AppComponent implements OnInit {
   pokemonAbility: AbilitySprites[] = [];
   list: string[]= [];
   pokeUrl: string = 'https://a-static.mlcdn.com.br/450x450/pokemon-rotom-pokedex-e-pokebola-super-bola-tomy-sunny-1971-tomy-toys/oliststore/mglfogqnlbi6xn7u/885e77aba789b55aae4eee95431093ae.jpeg'
+  nameUrl: string = 'https://pokeapi.co/api/v2/pokemon/pidgeotto'
 
-  constructor(private service: ServiceService) { }
+  constructor(private service: ServiceService, private route: Router) { }
   ngOnInit(): void {
     this.getListPokemon();
+    this.getNameList();
+  }
+
+  getNameList(){
+    this.service.getAbility(this.nameUrl).subscribe(ability => {
+      this.service.ability = ability.abilities;
+      this.service.pokemon = ability.sprites;
+    });
   }
   
   addNext(){
@@ -27,6 +37,10 @@ export class AppComponent implements OnInit {
   previousNext(){
     this.service.previousNext();
     this.getListPokemon();
+  }
+
+  getText(name: string){
+    this.route.navigate(['result'])
   }
 
   getListPokemon(): void {

@@ -26,7 +26,25 @@ export interface AbilitySprites {
 }
 
 export interface PokemonAbilitiesResponse {
-  name: string; 
+  name: string;
   sprites: AbilitySprites;
+}
+
+export interface Ability {
+  abilities: [
+    {
+      ability: {
+        name: string,
+        url: string
+      },
+      is_hidden: boolean,
+      slot: number
+    },
+  ],
+}
+
+export interface ListAbility {
+  abilities: Ability[];
+  sprites: AbilitySprites[];
 }
 

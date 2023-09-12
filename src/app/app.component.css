@@ -2,13 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
-  margin-left: 20px;
+  margin-left: 3%;
   margin-top: 10px;
+  
 }
 .header-button{
   display: flex;
   background-color: rgb(255, 60, 0);
 }
+
+.pok-name{
+  background-color: rgb(227, 248, 34);
+  cursor: pointer;
+  border:none!important;
+}
+
 .button{
   display: flex;
   width: 100px;
@@ -60,7 +68,10 @@
 .embed_list li {
   display: flex;
   flex-wrap: wrap;
-  width: 100px;
+  width: 160px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
   background-color: rgb(227, 248, 34);
 }
 .embed_list li > img {

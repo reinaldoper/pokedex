@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { API } from './envirenmont/api'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PokemonListResponse, PokemonAbilitiesResponse } from './TTypes/TTypes';
+import { PokemonListResponse, PokemonAbilitiesResponse, ListAbility, Ability, AbilitySprites } from './TTypes/TTypes';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,8 @@ export class ServiceService {
   apiList: string = API.apiList;
   apiHost: string = API['X-RapidAPI-Host'];
   next: number = 0;
+  ability:Ability[] = [];
+  pokemon: AbilitySprites[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -36,6 +38,18 @@ export class ServiceService {
 
     const requestOptions = { headers: header };
     return this.http.get<PokemonAbilitiesResponse>(url, requestOptions);
+  }
+
+  getAbility(url: string): Observable<ListAbility> {
+    let header = new HttpHeaders({
+      'Content-Type':  'application/json; charset=utf-8',
+      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+      "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+    });
+
+    const requestOptions = { headers: header };
+    return this.http.get<ListAbility>(url, requestOptions);
   }
 
   addNext(){

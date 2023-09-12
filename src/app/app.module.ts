@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarregandoComponent } from './carregando/carregando.component';
+import { RenderizaComponent } from './renderiza/renderiza.component';
 
 @NgModule({
   declarations: [
     CarregandoComponent,
-    AppComponent
+    AppComponent,
+    RenderizaComponent
   ],
   imports: [
     BrowserModule,
