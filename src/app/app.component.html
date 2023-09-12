@@ -5,7 +5,8 @@
     <button type="button" (click)="addNext()" class="button">NEXT</button>
   </div>
 </div>
-<div class="pokemon" *ngIf="pokemonAbility">
+<app-carregando *ngIf="!pokemonAbility.length"></app-carregando>
+<div class="pokemon" *ngIf="pokemonAbility.length">
   <ol *ngFor="let pok of pokemonAbility" class='embed_list'>
     <p>{{pok.name}}</p>
     <li><img src={{pok.front_default}} alt="imagens"></li>
