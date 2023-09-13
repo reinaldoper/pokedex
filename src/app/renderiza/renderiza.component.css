@@ -1,3 +1,5 @@
+
+
 .button{
   display: flex;
   margin: auto;
@@ -8,4 +10,51 @@
   cursor: pointer;
   border:none!important;
   margin-top: 10px;
+  border-radius: 8px;
+}
+
+.ability-details{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgb(175, 243, 67);
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 10%;
+  border-radius: 10px;
+  background-color: yellow;
+  
+}
+
+li{
+  list-style: none;
+  background-color: yellow;
+  font-size: x-large;
+}
+img, .poke{
+  background-color: yellow;
+}
+ol{
+  margin-bottom: 25px;
+}
+
+.c-loader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 450px;
+  width: 450px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
 }

@@ -14,6 +14,7 @@ export class ServiceService {
   next: number = 0;
   ability:Ability[] = [];
   pokemon: AbilitySprites | any;
+  namePoke: string = '';
 
   constructor(private http: HttpClient) { }
 
@@ -40,7 +41,7 @@ export class ServiceService {
     return this.http.get<PokemonAbilitiesResponse>(url, requestOptions);
   }
 
-  getAbility(url: string): Observable<ListAbility> {
+  getAbility(name: string): Observable<ListAbility> {
     let header = new HttpHeaders({
       'Content-Type':  'application/json; charset=utf-8',
       'Access-Control-Allow-Origin': '*',
@@ -49,7 +50,7 @@ export class ServiceService {
     });
 
     const requestOptions = { headers: header };
-    return this.http.get<ListAbility>(url, requestOptions);
+    return this.http.get<ListAbility>(`${this.apiList}${name}`, requestOptions);
   }
 
   addNext(){
@@ -60,6 +61,13 @@ export class ServiceService {
     if(this.next >= 20){
       this.next -= 20;
     }
+  }
+  getName():string {
+    return this.namePoke;
+  }
+
+  setName(name:string){
+    this.namePoke = name;
   }
 
 }

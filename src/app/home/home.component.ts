@@ -35,10 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   getText(name: string){
-    this.service.getAbility(`${this.nameUrl}${name}`).subscribe(ability => {
-      this.service.ability = ability.abilities;
-      this.service.pokemon = ability.sprites;
-    });
+    this.service.setName(name);
     this.renderiza = true;
     this.route.navigate(['result'])
   }

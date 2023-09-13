@@ -14,12 +14,14 @@ export class RenderizaComponent implements OnInit {
 
   constructor(private service: ServiceService, private route: Router){}
   ngOnInit(): void {
-    this.getPoke();
+    this.getText();
   }
 
-  getPoke(){
-    this.ability = this.service.ability;
-    this.pokemon = this.service.pokemon;
+  getText(){
+    this.service.getAbility(this.service.getName()).subscribe(ability => {
+      this.ability = ability.abilities;
+      this.pokemon = ability.sprites;
+    });
   }
   
   back(){
