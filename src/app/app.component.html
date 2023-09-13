@@ -1,16 +1,2 @@
-<div class="header">
-  <img [src]="pokeUrl" alt="pokeImage" class="pokeImage">
-  <div class="header-button">
-    <button type="button" (click)="previousNext()" class="button">PREVIOUS</button>
-    <button type="button" (click)="addNext()" class="button">NEXT</button>
-  </div>
-</div>
-<app-carregando *ngIf="!pokemonAbility.length"></app-carregando>
-<div class="pokemon" *ngIf="pokemonAbility.length">
-  <ol *ngFor="let pok of pokemonAbility" class='embed_list'>
-    <button type="button" (click)="getText(pok.name)" class="pok-name"><strong>{{pok.name}}</strong></button>
-    <li><img src={{pok.front_default}} alt="imagens"></li>
-    <li><img src={{pok.back_default}} alt="imagens"></li>
-  </ol>
-</div>
+
 <router-outlet></router-outlet>

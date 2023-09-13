@@ -1,1 +1,12 @@
-<p>renderiza works!</p>
+<button type="button" (click)="back()" class="button">back</button>
+<div *ngIf="ability && pokemon">
+  <ol>
+    <li *ngFor="let pok of ability">{{ pok.ability.name}}</li>
+  </ol>
+  <div>
+    <img [src]="pokemon.back_default" alt="imagens">
+    <img [src]="pokemon.front_default" alt="imagens">
+    <img [src]="pokemon.back_shiny" alt="imagens">
+    <img [src]="pokemon.front_shiny" alt="imagens">
+  </div>
+</div>

@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarregandoComponent } from './carregando/carregando.component';
 import { RenderizaComponent } from './renderiza/renderiza.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     CarregandoComponent,
     AppComponent,
-    RenderizaComponent
+    RenderizaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

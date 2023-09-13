@@ -1,0 +1,117 @@
+.pokemon{
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  margin-left: 3%;
+  margin-top: 10px;
+  
+}
+.header-button{
+  display: flex;
+  background-color: rgb(255, 60, 0);
+}
+
+.pok-name{
+  background-color: rgb(227, 248, 34);
+  cursor: pointer;
+  border:none!important;
+}
+
+.button{
+  display: flex;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.pokeImage{
+  width: 100px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.button:hover{
+  background-color: rgb(136, 119, 113);
+  cursor: pointer;
+}
+
+.header{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  
+  background-color: rgb(255, 60, 0);
+}
+
+.embed_list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 160px;
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(227, 248, 34);
+}
+
+/* Estilos para cada item da lista */
+.embed_list li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(227, 248, 34);
+}
+.embed_list li > img {
+  background-color: rgb(227, 248, 34);
+}
+.embed_list p {
+  background-color: rgb(227, 248, 34);
+}
+
+/* Estilos adicionais para dispositivos móveis (opcional) */
+@media screen and (max-width: 768px) {
+  .header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header-button{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .pokeImage{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header-button{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .pokeImage{
+    margin: 0 auto;
+  }
+}

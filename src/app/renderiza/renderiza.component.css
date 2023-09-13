@@ -1,0 +1,11 @@
+.button{
+  display: flex;
+  margin: auto;
+  width: 100px;
+  text-align: center;
+  padding: 20px 35px;
+  background-color: chartreuse;
+  cursor: pointer;
+  border:none!important;
+  margin-top: 10px;
+}

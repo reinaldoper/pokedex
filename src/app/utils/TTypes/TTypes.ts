@@ -31,20 +31,16 @@ export interface PokemonAbilitiesResponse {
 }
 
 export interface Ability {
-  abilities: [
-    {
       ability: {
         name: string,
         url: string
       },
       is_hidden: boolean,
       slot: number
-    },
-  ],
 }
 
 export interface ListAbility {
   abilities: Ability[];
-  sprites: AbilitySprites[];
+  sprites: AbilitySprites;
 }
 

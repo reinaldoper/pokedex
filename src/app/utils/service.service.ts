@@ -13,7 +13,7 @@ export class ServiceService {
   apiHost: string = API['X-RapidAPI-Host'];
   next: number = 0;
   ability:Ability[] = [];
-  pokemon: AbilitySprites[] = [];
+  pokemon: AbilitySprites | any;
 
   constructor(private http: HttpClient) { }
 
