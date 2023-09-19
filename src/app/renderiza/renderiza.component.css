@@ -58,3 +58,17 @@ ol{
     transform: rotate(1turn);
   }
 }
+
+@media screen and (max-width: 450px) {
+  .ability-details{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    height: 400px;
+  }
+  .c-loader{
+    height: 200px;
+    width: 200px;
+  }
+}

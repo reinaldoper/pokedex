@@ -24,3 +24,10 @@
     transform: rotate(1turn);
   }
 }
+
+@media  screen and (max-width:450px) {
+  .c-loader{
+    height: 200px;
+    width: 200px;
+  }
+}

@@ -12,7 +12,7 @@ import { Observable, forkJoin } from 'rxjs';
 export class HomeComponent implements OnInit {
   pokemonList: Pokemon[] = [];
   pokemonAbility: AbilitySprites[] = [];
-  list: string[]= [];
+  list: string[] = [];
   pokeUrl: string = 'https://a-static.mlcdn.com.br/450x450/pokemon-rotom-pokedex-e-pokebola-super-bola-tomy-sunny-1971-tomy-toys/oliststore/mglfogqnlbi6xn7u/885e77aba789b55aae4eee95431093ae.jpeg'
   nameUrl: string = 'https://pokeapi.co/api/v2/pokemon/'
   renderiza: boolean = false;
@@ -23,33 +23,33 @@ export class HomeComponent implements OnInit {
     this.getListPokemon();
     this.renderiza = false;
   }
-  
-  addNext(){
+
+  addNext() {
     this.service.addNext();
     this.getListPokemon();
   }
 
-  previousNext(){
+  previousNext() {
     this.service.previousNext();
     this.getListPokemon();
   }
 
-  getText(name: string){
+  getText(name: string) {
     this.service.setName(name);
     this.renderiza = true;
     this.route.navigate(['result'])
   }
 
   getListPokemon(): void {
-    this.list = []; 
+    this.list = [];
     this.service.getPokemonList().subscribe(api => {
       this.pokemonList = api.results;
       api.results.forEach(list => this.getListAbility(list.url));
     });
   }
- 
 
-  getListAbility(url: string):void {
+
+  getListAbility(url: string): void {
     this.list.push(url);
     const observables: Observable<any>[] = [];
     this.list.forEach(urlList => {
@@ -62,6 +62,6 @@ export class HomeComponent implements OnInit {
         return abilitySprites;
       });
     });
-  }  
+  }
 
 }
