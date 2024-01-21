@@ -71,8 +71,177 @@
   border-radius: 8px;
   text-align: center;
   justify-content: center;
-  background-color: rgb(227, 248, 34);
+  /* background-color: rgb(227, 248, 34); */
 }
+.normal {
+  background-color: #a6a877;
+}
+.normal li{
+  background-color: #a6a877;
+}
+.normal li > img{
+  background-color: #a6a877;
+}
+
+
+.grass {
+  background-color: #77c850;
+}
+.grass li {
+  background-color: #77c850;
+}
+.grass li > img {
+  background-color: #77c850;
+}
+
+
+.fire {
+  background-color: #ee7f30;
+}
+.fire li {
+  background-color: #ee7f30;
+}
+.fire li > img {
+  background-color: #ee7f30;
+}
+
+
+.water {
+  background-color: #678fee;
+}
+
+.water li {
+  background-color: #678fee;
+}
+.water li > img {
+  background-color: #678fee;
+}
+
+
+
+.electric {
+  background-color: #f7cf2e;
+}
+.electric li{
+  background-color: #f7cf2e;
+}
+.electric li > img{
+  background-color: #f7cf2e;
+}
+
+
+.ice {
+  background-color: #98d5d7;
+}
+.ice li{
+  background-color: #98d5d7;
+}
+.ice li > img{
+  background-color: #98d5d7;
+}
+
+
+.ground {
+  background-color: #dfbf69;
+}
+.ground li{
+  background-color: #dfbf69;
+}
+.ground li > img{
+  background-color: #dfbf69;
+}
+
+
+
+.flying {
+  background-color: #a98ff0;
+}
+.flying li{
+  background-color: #a98ff0;
+}
+.flying li > img{
+  background-color: #a98ff0;
+}
+
+
+
+.poison {
+  background-color: #a040a0;
+}
+.poison li{
+  background-color: #a040a0;
+}
+.poison li > img{
+  background-color: #a040a0;
+}
+
+
+.fighting {
+  background-color: #bf3029;
+}
+.fighting li{
+  background-color: #bf3029;
+}
+.fighting li > img{
+  background-color: #bf3029;
+}
+
+
+
+.psychic {
+  background-color: #f65687;
+}
+.psychic li{
+  background-color: #f65687;
+}
+.psychic li > img{
+  background-color: #f65687;
+}
+
+
+
+.dark {
+  background-color: #725847;
+}
+.dark li{
+  background-color: #725847;
+}
+.dark li > img{
+  background-color: #725847;
+}
+
+
+
+.rock {
+  background-color: #b8a137;
+}
+.rock li{
+  background-color: #b8a137;
+}
+.rock li > img{
+  background-color: #b8a137;
+}
+
+.bug, .bug li, .bug li > img{
+  background-color: #a8b720;
+}
+
+.ghost, .ghost li, .ghost li > img{
+  background-color: #6e5896;
+}
+
+.steel, .steel li, .steel li > img{
+  background-color: #b9b7cf;
+}
+
+.dragon, .dragon li, .dragon li > img{
+  background-color: #6f38f6;
+}
+
+.fairy, .fairy li, .fairy li > img {
+  background-color: #f9aec7;
+}
+
 
 /* Estilos para cada item da lista */
 .embed_list li {
@@ -82,13 +251,7 @@
   border-radius: 8px;
   text-align: center;
   justify-content: center;
-  background-color: rgb(227, 248, 34);
-}
-.embed_list li > img {
-  background-color: rgb(227, 248, 34);
-}
-.embed_list p {
-  background-color: rgb(227, 248, 34);
+  /* background-color: rgb(227, 248, 34); */
 }
 
 /* Estilos adicionais para dispositivos móveis (opcional) */

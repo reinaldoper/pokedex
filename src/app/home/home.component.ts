@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
       this.pokemonAbility = responses.map(response => {
         const abilitySprites = response.sprites;
         abilitySprites.name = response.name;
+        abilitySprites.types = response.types;
         return abilitySprites;
       });
     });

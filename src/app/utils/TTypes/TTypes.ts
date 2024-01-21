@@ -23,6 +23,20 @@ export interface AbilitySprites {
   front_female: null;
   front_shiny: string;
   front_shiny_female: null;
+  types: [
+    {
+      type: {
+        name: string,
+        url: string
+      }
+    },
+    {
+      type: {
+        name: string,
+        url: string
+      }
+    }
+  ],
 }
 
 export interface PokemonAbilitiesResponse {
@@ -31,12 +45,12 @@ export interface PokemonAbilitiesResponse {
 }
 
 export interface Ability {
-      ability: {
-        name: string,
-        url: string
-      },
-      is_hidden: boolean,
-      slot: number
+  ability: {
+    name: string,
+    url: string
+  },
+  is_hidden: boolean,
+  slot: number
 }
 
 export interface ListAbility {
