@@ -4,6 +4,6 @@
   margin: 0;
   padding: 0;
   background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,85,29,0.3253676470588235) 48%, rgba(42,121,24,1) 100%);
+  background-color: lightcoral;
   font-family: 'Times New Roman', Times, serif, 'Times New Roman', Times, serif;
 }
