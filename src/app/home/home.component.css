@@ -30,6 +30,8 @@
   display: flex;
   margin: auto;
   border-radius: 8px;
+  max-width: 40%;
+  height: 5rem;
 }
 
 .button{
