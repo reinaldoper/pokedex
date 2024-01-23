@@ -12,7 +12,7 @@
     <ol *ngFor="let pok of pokemonAbility" class='embed_list {{pok.types[0].type.name}}'>
       <li id="type">{{pok.types[0].type.name}}</li>
       <li><img src={{pok.front_default}} alt="imagens"></li>
-      <li><img src={{pok.back_default}} alt="imagens"></li>
+      <li><img class="efeito" src={{pok.back_default}} alt="imagens"></li>
       <li><img src={{pok.back_shiny}} alt="imagens"></li>
       <button type="button" (click)="getText(pok.name)" class="pok-name">{{pok.name}}</button>
     </ol>
