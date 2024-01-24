@@ -48,20 +48,14 @@
 }
 .pokeImage{
   width: 100px;
-  border-radius: 100%;
+  border-radius: 70% 40% 20% 10%;
   margin-bottom: 10px;
-  animation: loading 5s infinite;
   margin-top: 10px;
 }
 .efeito{
   animation: is 5s infinite;
 }
 
-@keyframes loading {
-  to {
-    transform: rotate3d(0, 1, 0, 60deg);
-  }
-}
 @keyframes is {
   to {
     transform: rotate3d(0, 1, 0, 360deg);
